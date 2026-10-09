@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-lab
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+app:
+  owner: Kereev Assylkhan
+  group: IS-2401
+  mail:
+    from: 40557@iitu.kz
+    retry-count: 3
+    timeout: 5s
+    enabled: true
+
+logging:
+  level:
+    kz.iitu: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, env, configprops, conditions
